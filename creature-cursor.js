@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ==========================================================================
-     5. PFP Video Hover / Touch Reveal (Light & Dark Theme)
+     5. PFP Video Hover part
      ========================================================================== */
   const pfpContainer = document.getElementById('pfpContainer');
   if (pfpContainer) {
