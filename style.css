@@ -583,21 +583,6 @@ body.light .primary-btn:hover {
   text-underline-offset: 4px;
 }
 
-/* Interactive Creature Canvas */
-#creature-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-  z-index: 99;
-}
-
-body.light #creature-canvas {
-  filter: invert(0.92) contrast(1.2);
-}
-
 /* ==========================================================================
    8. Footer
    ========================================================================== */

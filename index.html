@@ -12,7 +12,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -153,21 +152,7 @@ Driven by curiosity and practical logic, I enjoy turning technical concepts into
     </div>
   </footer>
 
-  <!-- Interactive Creature Canvas Overlay ni diri nga part -->
-  <canvas id="creature-canvas"></canvas>
-  <script src="creature-cursor.js"></script>
-
-  <!-- Mouse Tracking Variable Script nga part-->
-  <script>
-    document.addEventListener('mousemove', (e) => {
-      const x = (e.clientX / window.innerWidth) * 100;
-      const y = (e.clientY / window.innerHeight) * 100;
-      document.body.style.setProperty('--mouse-x', `${x}%`);
-      document.body.style.setProperty('--mouse-y', `${y}%`);
-    });
-  </script>
-
-  <!-- ==================== FLOATING AI CHAT WIDGET ==================== -->
+    <!--AI widget-->
   <div id="ai-chat-widget">
       <!-- Floating Trigger Button -->
       <button id="chat-toggle-btn" aria-label="Open Chat Assistant" type="button">
@@ -242,7 +227,7 @@ Driven by curiosity and practical logic, I enjoy turning technical concepts into
           userInput.value = '';
 
           // Show Thinking State
-          const loadingId = appendMessage('Thinking...', 'ai', true);
+          const loadingId = appendMessage('Thinking...', 'ai');
 
           try {
               // 3. REPLACED: Sending the full `chatHistory` array instead of just a single `{ message }`
@@ -266,13 +251,13 @@ Driven by curiosity and practical logic, I enjoy turning technical concepts into
               appendMessage('Error: Could not connect to backend server.', 'ai');
           }
       });
-      function appendMessage(text, sender, isLoading = false) {
+      function appendMessage(text, sender) {
           const messageId = 'msg-' + Date.now();
           const isUser = sender === 'user';
 
           const messageDiv = document.createElement('div');
           messageDiv.id = messageId;
-          messageDiv.className = `chat-msg ${isUser ? 'user-msg' : 'ai-msg'} ${isLoading ? 'animate-pulse' : ''}`;
+          messageDiv.className = `chat-msg ${isUser ? 'user-msg' : 'ai-msg'}`;
           messageDiv.innerHTML = `<p>${text}</p>`;
 
           chatContainer.appendChild(messageDiv);
