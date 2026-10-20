@@ -655,7 +655,7 @@ footer {
 
   .hero-container {
     flex-direction: column-reverse;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     text-align: center;
     gap: 2rem;

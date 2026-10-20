@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (window.lucide) {
     lucide.createIcons();
   }
-});
+
 
 /* ==========================================================================
      5. PFP Video Hover part
@@ -138,4 +138,4 @@ document.addEventListener('DOMContentLoaded', () => {
     pfpContainer.addEventListener('touchcancel', stopPfpVideo);
   }
 
- 
+});
