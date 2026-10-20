@@ -660,7 +660,9 @@ footer {
     text-align: center;
     gap: 2rem;
   }
-
+  .hero-actions {
+    justify-content: center;
+  }
   .pfp-container {
     width: 180px;
     height: 220px;
