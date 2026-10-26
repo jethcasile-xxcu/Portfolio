@@ -361,7 +361,7 @@ body.light .primary-btn:hover {
 
 .theme-btn-oval {
   border-radius: 9999px;
-  padding: 0.7rem 1.15rem;
+  padding: 0.2rem 0.65rem;
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-glow);
   color: var(--text-primary);

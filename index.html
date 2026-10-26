@@ -26,6 +26,11 @@
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="btn theme-btn-oval" aria-label="Toggle Theme" type="button">
+            <i data-lucide="sun" id="theme-icon"></i>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -46,11 +51,6 @@
           <div class="hero-actions">
             <a href="#projects" class="btn primary-btn">View Work</a>
             <a href="#contact" class="btn secondary-btn">Get in Touch</a>
-            
-            <!-- Distinct Oval Theme Toggle Button paras theme-->
-            <button id="theme-toggle" class="btn theme-btn-oval" aria-label="Toggle Theme" type="button">
-              <i data-lucide="sun" id="theme-icon"></i>
-            </button>
           </div>
         </div>
 
@@ -218,7 +218,7 @@
           const message = userInput.value.trim();
           if (!message) return;
 
-          // 2. ADDED: Push user message to history before sending
+          // 2.Push user message to history before sending
           chatHistory.push({ role: 'user', text: message });
 
           // Append User Message to UI
