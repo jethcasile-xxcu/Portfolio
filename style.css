@@ -69,6 +69,9 @@ body {
   flex-direction: column;
   transition: background-color var(--transition-fast), color var(--transition-fast);
 }
+html {
+  overflow-x: hidden;
+}
 
 main {
   flex: 1;
@@ -644,7 +647,29 @@ footer {
   .nav-links {
     gap: 1.25rem;
   }
+  section {
+    text-align: center;
+  }
 
+  #about p,
+  #contact p,
+  .project-card p,
+  .project-card h3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #about p {
+    max-width: 100%;
+  }
+
+  .contact-card {
+    text-align: center;
+  }
+
+  .project-links {
+    justify-content: center;
+  }
   section {
     padding: 4rem 1.25rem;
   }
